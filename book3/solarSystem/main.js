@@ -39,13 +39,17 @@ const upperPlanet = planets.map(function(str){
     https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes
 */
 
+const filterPlanets = planets.filter(planet => planet.includes("e"))
 
-    const filteredPlanets = planets.filter(() => {
-planets.includes('e' || "E");
-    })
-
+console.log(filterPlanets)
            
 
-console.log(filteredPlanets)
 // Use the reduce method to create a sentence from the words in the following array
 const words = ["The", "early", "bird", "might", "get", "the", "worm", "but", "the", "second", "mouse", "gets", "the", "cheese"]
+
+
+
+
+const combineWords = words.reduce((sentence, nextWord) => (sentence + " " + nextWord))
+
+console.log(combineWords)
