@@ -1,9 +1,3 @@
-// You have been tasked with building a list of email addresses for all of our customers, so we can spam them with email about Miffles the Vampire Weiner Dog.
-
-// Create a new project in workspace.
-// In your JavaScript file, define a variable named customers.
-// Copy the contents of the customers.json and make that object the value of customers.
-// From that object extract just the customers' email addresses and store them in a new array. You will need to use methods such as map(), forEach() and/or concat() to accomplish this.
 
 const customers = {
     "customers": [
@@ -251,14 +245,26 @@ const customers = {
 }
 
 
+// You have been tasked with building a list of email addresses for all of our customers, so we can spam them with email about Miffles the Vampire Weiner Dog.
+
+// Create a new project in workspace.
+// In your JavaScript file, define a variable named customers.
+// Copy the contents of the customers.json and make that object the value of customers.
+// From that object extract just the customers' email addresses and store them in a new array. You will need to use methods such as map(), forEach() and/or concat() to accomplish this.
+
+
+const emailList = []
+
+
+for (let i = 0; i < customers.customers.length; i++) {
+    const element = customers.customers[i].contacts.email;
+    emailList.push(element)
+    
+}
 
 
 
-
-const emails = customers.forEach(email => {
-    email.map(x => x.customers.email)
-});
-console.log(emails)
+console.log(emailList)
 
 
 
