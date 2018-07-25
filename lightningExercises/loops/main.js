@@ -7,3 +7,10 @@ const filterArray = words.filter(word =>{
 })
 
 console.log(filterArray)
+
+const text = document.querySelector(".text")
+
+const textArray = document.createElement("p")
+textArray.textContent = filterArray.join(" ")
+
+text.appendChild(textArray)
